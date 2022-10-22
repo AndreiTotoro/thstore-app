@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Box, ChakraProvider } from '@chakra-ui/react';
-import Card from './components/Card';
+import { Box, Button, ChakraProvider } from '@chakra-ui/react';
 import Cards from './components/Cards';
 import Search from './components/Search';
+import Btn from './components/Btn';
+import HomeIcon from '@mui/icons-material/Home';
+
+const BTNCOLOR = '#4f4e5e';
 
 function App() {
   const [cards, addCard] = useState([]);
@@ -45,6 +48,11 @@ function App() {
         <Box bg="tomato" w="100%" p={4} color="white">
           This is a test!
         </Box>
+        <Btn
+          icon={<HomeIcon sx={{ color: 'white' }} />}
+          highlighted="true"
+          text={'Hello'}
+        />
         <Search
           search={search}
           updateSearch={updateSearch}

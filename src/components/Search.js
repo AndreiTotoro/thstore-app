@@ -13,22 +13,23 @@ function Search({ search, updateSearch, setShowAll }) {
   return (
     <Box
       boxShadow="xs"
-      rounded="xl"
+      rounded="40"
       p={2}
-      paddingTop={1}
-      paddingBottom={1}
+      paddingTop={2}
+      paddingBottom={2}
       borderColor="#171624"
       background="#171624"
       display="flex"
       alignContent="center"
       alignItems="center"
+      width="90%"
     >
       <TravelExploreIcon sx={{ color: '#646371' }} />
       <Input
         focusBorderColor="0"
         value={search}
         onChange={handleSearch}
-        placeholder="Here is a sample placeholder"
+        placeholder="Search any collection"
         size="sm"
         color="#646371"
       />

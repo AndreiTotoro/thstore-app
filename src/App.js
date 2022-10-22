@@ -7,6 +7,7 @@ import Search from './components/Search';
 function App() {
   const [cards, addCard] = useState([]);
   const [search, updateSearch] = useState('');
+  const [showAll, setShowAll] = useState(true);
 
   const cardCreator = (name, img, author, price) => {
     const new_card = {
@@ -32,14 +33,24 @@ function App() {
     addCard(dummyValues());
   }, []);
 
+  const cardsToShow = showAll
+    ? cards
+    : cards.filter(card =>
+        card.name.toLowerCase().includes(search.toLocaleLowerCase())
+      );
+
   return (
     <ChakraProvider>
       <Box bg={'#202135'}>
         <Box bg="tomato" w="100%" p={4} color="white">
           This is a test!
         </Box>
-        <Search search={search} updateSearch={updateSearch} />
-        <Cards cards={cards} />
+        <Search
+          search={search}
+          updateSearch={updateSearch}
+          setShowAll={setShowAll}
+        />
+        <Cards cards={cardsToShow} />
       </Box>
     </ChakraProvider>
   );

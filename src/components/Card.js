@@ -12,7 +12,7 @@ function Card({ imgp, name, author, price }) {
       rounded="xl"
       paddingLeft={2}
       paddingRight={2}
-      marginBottom={3}
+      marginBottom={4}
     >
       <Box>
         <Image

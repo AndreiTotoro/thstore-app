@@ -32,7 +32,7 @@ function App() {
       <Box bg="tomato" w="100%" p={4} color="white">
         This is a test!
       </Box>
-      <Box display="flex">
+      <Box display="flex" justifyContent="space-around">
         <Card imgp="1.jpg" name="Andrei" author="John" price="300" />
         <Card imgp="1.jpg" name="Andrei" author="John" price="300" />
       </Box>

@@ -12,11 +12,13 @@ function Card({ imgp, name, author, price }) {
       rounded="xl"
       paddingLeft={2}
       paddingRight={2}
+      marginBottom={3}
     >
       <Box>
         <Image
           background="#171624"
           boxShadow="xs"
+          width="100"
           rounded="xl"
           src={require(`../img/${imgp}`)}
         />
@@ -73,7 +75,8 @@ function Card({ imgp, name, author, price }) {
           alignItems="center"
           alignContent="center"
         >
-          <Image width="6" src={require('../img/eth.png')} /> {price} ETH
+          <Image width="6" src={require('../img/eth.png')} />{' '}
+          <box fontSize="sm">{price} ETH</box>
         </Box>
       </Box>
     </Flex>

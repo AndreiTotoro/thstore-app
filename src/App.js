@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Box, ChakraProvider } from '@chakra-ui/react';
 import Card from './components/Card';
 import Cards from './components/Cards';
+import Search from './components/Search';
 
 function App() {
   const [cards, addCard] = useState([]);
+  const [search, updateSearch] = useState('');
 
   const cardCreator = (name, img, author, price) => {
     const new_card = {
@@ -36,6 +38,7 @@ function App() {
         <Box bg="tomato" w="100%" p={4} color="white">
           This is a test!
         </Box>
+        <Search search={search} updateSearch={updateSearch} />
         <Cards cards={cards} />
       </Box>
     </ChakraProvider>

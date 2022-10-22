@@ -76,7 +76,7 @@ function Card({ imgp, name, author, price }) {
           alignContent="center"
         >
           <Image width="6" src={require('../img/eth.png')} />{' '}
-          <box fontSize="sm">{price} ETH</box>
+          <Box fontSize="sm">{price} ETH</Box>
         </Box>
       </Box>
     </Flex>

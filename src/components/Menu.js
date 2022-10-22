@@ -6,15 +6,14 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import BtnStack1 from './BtnStack1';
 import BtnStack2 from './BtnStack2';
 import Logo from './Logo';
-import { Divider, Flex } from '@chakra-ui/react';
+import { Divider, Flex, Stack } from '@chakra-ui/react';
 
 function Menu() {
   return (
-    <Flex
-      height="100vh"
+    <Stack
       flexBasis="14%"
       bgColor="#171624"
-      gap="60px"
+      spacing="60px"
       alignContent="center"
       alignItems="center"
       flexDirection="column"
@@ -28,7 +27,7 @@ function Menu() {
         text="Logout"
         icon={<ExitToAppIcon sx={{ color: '#cb4444', fontSize: '14px' }} />}
       />
-    </Flex>
+    </Stack>
   );
 }
 

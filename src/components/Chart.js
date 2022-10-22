@@ -39,7 +39,7 @@ export const data = {
   datasets: [
     {
       label: 'Balance',
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 100000 })),
       borderColor: 'green',
       backgroundColor: 'green',
     },
@@ -49,13 +49,19 @@ export const data = {
 function Chart() {
   return (
     <Stack
+      height="60%"
       flexBasis="40%"
       align="center"
-      paddingTop={10}
+      marginTop={6}
       backgroundColor="#171624"
       rounded={20}
     >
-      <Text color="#80808d">Balance</Text>
+      <Text paddingTop="30px" color="#80808d">
+        Balance
+      </Text>
+      <Text fontSize="3xl" color="white">
+        ${data.datasets[0].data[6]}
+      </Text>
       <Line options={options} data={data} />;
     </Stack>
   );

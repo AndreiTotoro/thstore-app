@@ -4,7 +4,6 @@ import { Text, Box } from '@chakra-ui/react';
 function Logout({ icon, text }) {
   return (
     <Box
-      marginTop="auto"
       display="flex"
       gap={1.5}
       alignContent="center"

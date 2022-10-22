@@ -14,13 +14,16 @@ function App() {
     return new_card;
   };
 
+  const dummyValues = () => {
+    return [
+      cardCreator('John', 'someimg.jpg', 'Andrei', '300'),
+      cardCreator('ewqeq', 'someimg.jpg', 'Andrei', '500'),
+      cardCreator('Jqewn', 'somimg.jpg', 'Andrei', '800'),
+    ];
+  };
+
   useEffect(() => {
-    addCard([...cards, cardCreator('John', 'someimg.jpg', 'Andrei', '300')]);
-    addCard([...cards, cardCreator('Udad', 'someimg.jpg', 'Andrei', '30dsa0')]);
-    addCard([
-      ...cards,
-      cardCreator('saad', 'someimdsg.jpg', 'Andrei', '30dsa0'),
-    ]);
+    addCard([...cards, dummyValues()]);
   }, []);
 
   return (

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Box, ChakraProvider } from '@chakra-ui/react';
+import Card from './components/Card';
 
 function App() {
   const [cards, addCard] = useState([]);
@@ -30,6 +31,10 @@ function App() {
     <ChakraProvider>
       <Box bg="tomato" w="100%" p={4} color="white">
         This is a test!
+      </Box>
+      <Box display="flex">
+        <Card imgp="1.jpg" name="Andrei" author="John" price="300" />
+        <Card imgp="1.jpg" name="Andrei" author="John" price="300" />
       </Box>
     </ChakraProvider>
   );

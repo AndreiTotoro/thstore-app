@@ -3,6 +3,7 @@ import React from 'react';
 import Cards from './Cards';
 import Search from './Search';
 import Banner from './Banner';
+import Trending from './Trending';
 
 function Content({ search, updateSearch, setShowAll, cardsToShow }) {
   return (
@@ -19,6 +20,7 @@ function Content({ search, updateSearch, setShowAll, cardsToShow }) {
         setShowAll={setShowAll}
       />
       <Banner />
+      <Trending />
       <Cards cards={cardsToShow} />
     </Flex>
   );

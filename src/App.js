@@ -8,6 +8,7 @@ import '@fontsource/poppins';
 import Menu from './components/Menu';
 import Content from './components/Content';
 import Chart from './components/Chart';
+import Social from './components/Social';
 
 const theme = extendTheme({
   fonts: {
@@ -70,7 +71,7 @@ function App() {
           setShowAll={setShowAll}
           cardsToShow={cardsToShow}
         />
-        <Chart />
+        <Social />
       </Box>
     </ChakraProvider>
   );

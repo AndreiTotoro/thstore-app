@@ -48,14 +48,7 @@ export const data = {
 
 function Chart() {
   return (
-    <Stack
-      height="60%"
-      flexBasis="40%"
-      align="center"
-      marginTop={6}
-      backgroundColor="#171624"
-      rounded={20}
-    >
+    <Stack backgroundColor="#171624" rounded={20}>
       <Text paddingTop="30px" color="#80808d">
         Balance
       </Text>

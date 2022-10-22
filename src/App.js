@@ -7,6 +7,7 @@ import { extendTheme } from '@chakra-ui/react';
 import '@fontsource/poppins';
 
 import Menu from './components/Menu';
+import Banner from './components/Banner';
 
 const theme = extendTheme({
   fonts: {
@@ -69,6 +70,7 @@ function App() {
             updateSearch={updateSearch}
             setShowAll={setShowAll}
           />
+          <Banner />
           <Cards cards={cardsToShow} />
         </Box>
       </Box>

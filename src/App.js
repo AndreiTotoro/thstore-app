@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Button, ChakraProvider } from '@chakra-ui/react';
+import { Box, ChakraProvider } from '@chakra-ui/react';
 import Cards from './components/Cards';
 import Search from './components/Search';
 import Btn from './components/Btn';
 import HomeIcon from '@mui/icons-material/Home';
-
-const BTNCOLOR = '#4f4e5e';
 
 function App() {
   const [cards, addCard] = useState([]);
@@ -49,7 +47,7 @@ function App() {
           This is a test!
         </Box>
         <Btn
-          icon={<HomeIcon sx={{ color: 'white' }} />}
+          icon={<HomeIcon sx={{ color: 'white', fontSize: '15px' }} />}
           highlighted="true"
           text={'Hello'}
         />

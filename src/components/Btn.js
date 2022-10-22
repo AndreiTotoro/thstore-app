@@ -1,4 +1,4 @@
-import { Box, Icon, Text } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
 
 function Btn({ icon, text, highlighted }) {
@@ -6,7 +6,7 @@ function Btn({ icon, text, highlighted }) {
     return (
       <Box display="flex" gap={1.5} alignContent="center" alignItems="center">
         {icon}
-        <Text color="white" fontSize={20}>
+        <Text color="white" fontSize={15}>
           {text}
         </Text>
       </Box>

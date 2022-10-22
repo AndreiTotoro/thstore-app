@@ -8,22 +8,22 @@ import BookmarksIcon from '@mui/icons-material/Bookmarks';
 
 function BtnStack1() {
   return (
-    <VStack alignItems="center">
+    <VStack alignItems="center" spacing={6}>
       <Btn
-        icon={<DashboardIcon sx={{ color: 'white', fontSize: '15px' }} />}
+        icon={<DashboardIcon sx={{ color: 'white', fontSize: '18px' }} />}
         highlighted="true"
         text={'Dashboard'}
       />
       <Btn
-        icon={<ShowChartIcon sx={{ color: '#414050', fontSize: '15px' }} />}
+        icon={<ShowChartIcon sx={{ color: '#414050', fontSize: '18px' }} />}
         text={'Active Bids'}
       />
       <Btn
-        icon={<StorefrontIcon sx={{ color: '#414050', fontSize: '15px' }} />}
+        icon={<StorefrontIcon sx={{ color: '#414050', fontSize: '18px' }} />}
         text={'Market'}
       />
       <Btn
-        icon={<BookmarksIcon sx={{ color: '#414050', fontSize: '15px' }} />}
+        icon={<BookmarksIcon sx={{ color: '#414050', fontSize: '18px' }} />}
         text={'Favorites'}
       />
     </VStack>

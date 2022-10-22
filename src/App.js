@@ -13,6 +13,13 @@ const theme = extendTheme({
     heading: `'Raleway', sans-serif`,
     body: `'Raleway', sans-serif`,
   },
+  styles: {
+    global: () => ({
+      body: {
+        bg: '#202135',
+      },
+    }),
+  },
 });
 
 function App() {
@@ -35,6 +42,8 @@ function App() {
       ...cards,
       cardCreator('Weay Artwork', '1.jpg', 'Darwin Shaffer', '4.5'),
       cardCreator('Spectrum of Color', '3.jpg', 'Chace Rojos', '6.5'),
+      cardCreator('Dawn of Men', '3.jpg', 'Baltazar Armenie', '5.2'),
+      cardCreator('Retribution', '1.jpg', 'Jake Tran', '4.1'),
       cardCreator('Dawn of Men', '3.jpg', 'Baltazar Armenie', '5.2'),
       cardCreator('Retribution', '1.jpg', 'Jake Tran', '4.1'),
     ];

@@ -4,7 +4,12 @@ import { Box } from '@chakra-ui/react';
 
 function Logo({ icon, name }) {
   return (
-    <Box display="flex" alignContent="center" alignItems="center">
+    <Box
+      display="flex"
+      alignContent="center"
+      alignItems="center"
+      paddingTop={30}
+    >
       {icon}
       <Text fontFamily="Poppins" color="white" fontSize={20}>
         {name}

@@ -7,21 +7,21 @@ import Btn from './Btn';
 import { VStack } from '@chakra-ui/react';
 function BtnStack2() {
   return (
-    <VStack alignItems="center">
+    <VStack alignItems="center" spacing={6}>
       <Btn
-        icon={<EventNoteIcon sx={{ color: '#414050', fontSize: '15px' }} />}
+        icon={<EventNoteIcon sx={{ color: '#414050', fontSize: '18px' }} />}
         text={'My Portofolio'}
       />
       <Btn
-        icon={<TrackChangesIcon sx={{ color: '#414050', fontSize: '15px' }} />}
+        icon={<TrackChangesIcon sx={{ color: '#414050', fontSize: '18px' }} />}
         text={'History'}
       />
       <Btn
-        icon={<WalletIcon sx={{ color: '#414050', fontSize: '15px' }} />}
+        icon={<WalletIcon sx={{ color: '#414050', fontSize: '18px' }} />}
         text={'Wallet'}
       />
       <Btn
-        icon={<SettingsIcon sx={{ color: '#414050', fontSize: '15px' }} />}
+        icon={<SettingsIcon sx={{ color: '#414050', fontSize: '18px' }} />}
         text={'Settings'}
       />
     </VStack>

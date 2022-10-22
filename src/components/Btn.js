@@ -4,7 +4,13 @@ import React from 'react';
 function Btn({ icon, text, highlighted }) {
   if (highlighted === 'true') {
     return (
-      <Box display="flex" gap={1.5} alignContent="center" alignItems="center">
+      <Box
+        display="flex"
+        gap={1.5}
+        alignContent="center"
+        alignItems="center"
+        textAlign="left"
+      >
         {icon}
         <Text color="white" fontSize={15}>
           {text}

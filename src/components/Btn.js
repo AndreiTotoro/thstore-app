@@ -13,9 +13,9 @@ function Btn({ icon, text, highlighted }) {
     );
   } else {
     return (
-      <Box display="flex" gap={1.5}>
+      <Box display="flex" gap={1.5} alignContent="center" alignItems="center">
         {icon}
-        <Text color="#4f4e5e" fontSize="md">
+        <Text color="#4f4e5e" fontSize={15}>
           {text}
         </Text>
       </Box>

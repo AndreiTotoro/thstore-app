@@ -2,8 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { Box, ChakraProvider } from '@chakra-ui/react';
 import Cards from './components/Cards';
 import Search from './components/Search';
-import Btn from './components/Btn';
-import HomeIcon from '@mui/icons-material/Home';
+import { extendTheme } from '@chakra-ui/react';
+import BtnStack1 from './components/BtnStack1';
+import BtnStack2 from './components/BtnStack2';
+import Logo from './components/Logo';
+import '@fontsource/poppins';
+import DragHandleIcon from '@mui/icons-material/DragHandle';
+import Logout from './components/Logout';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+
+const theme = extendTheme({
+  fonts: {
+    heading: `'Raleway', sans-serif`,
+    body: `'Raleway', sans-serif`,
+  },
+});
 
 function App() {
   const [cards, addCard] = useState([]);
@@ -41,16 +54,18 @@ function App() {
       );
 
   return (
-    <ChakraProvider>
-      <Box bg={'#202135'}>
-        <Box bg="tomato" w="100%" p={4} color="white">
-          This is a test!
-        </Box>
-        <Btn
-          icon={<HomeIcon sx={{ color: 'white', fontSize: '15px' }} />}
-          highlighted="true"
-          text={'Hello'}
+    <ChakraProvider theme={theme}>
+      <Box bg={'#202135'} fontFamily="Poppins">
+        <Logo
+          icon={<DragHandleIcon sx={{ color: 'white' }} />}
+          name="THSTORE"
         />
+        <Logout
+          text="Logout"
+          icon={<ExitToAppIcon sx={{ color: '#cb4444' }} />}
+        />
+        <BtnStack1 />
+        <BtnStack2 />
         <Search
           search={search}
           updateSearch={updateSearch}

@@ -15,6 +15,7 @@ function Search({ search, updateSearch, setShowAll }) {
       boxShadow="xs"
       rounded="40"
       p={2}
+      marginTop={6}
       paddingTop={2}
       paddingBottom={2}
       borderColor="#171624"

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Box, ChakraProvider } from '@chakra-ui/react';
-import Cards from './components/Cards';
-import Search from './components/Search';
+
 import { extendTheme } from '@chakra-ui/react';
 
 import '@fontsource/poppins';
 
 import Menu from './components/Menu';
-import Banner from './components/Banner';
+import Content from './components/Content';
+import Chart from './components/Chart';
 
 const theme = extendTheme({
   fonts: {
@@ -64,15 +64,13 @@ function App() {
     <ChakraProvider theme={theme}>
       <Box bg={'#202135'} fontFamily="Poppins" display="flex">
         <Menu />
-        <Box flexBasis="45%">
-          <Search
-            search={search}
-            updateSearch={updateSearch}
-            setShowAll={setShowAll}
-          />
-          <Banner />
-          <Cards cards={cardsToShow} />
-        </Box>
+        <Content
+          search={search}
+          updateSearch={updateSearch}
+          setShowAll={setShowAll}
+          cardsToShow={cardsToShow}
+        />
+        <Chart />
       </Box>
     </ChakraProvider>
   );

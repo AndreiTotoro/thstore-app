@@ -4,7 +4,7 @@ import React from 'react';
 function Card({ imgp, name, author, price }) {
   return (
     <Flex
-      flexBasis="45%"
+      flexBasis="42.5%"
       direction="column"
       align="center"
       background="#171624"

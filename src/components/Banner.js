@@ -7,14 +7,16 @@ function Banner() {
     <Box
       boxShadow="xs"
       rounded="20"
-      height={40}
+      height="30%"
       width="90%"
       backgroundImage={require('../img/bkg.jpg')}
       display="flex"
       justifyContent="space-between"
+      alignContent="center"
+      alignItems="center"
     >
       <Box flexDir="column">
-        <Text fontSize="xl" padding={4} paddingLeft={10}>
+        <Text fontWeight="bold" fontSize="xl" padding={4} paddingLeft={10}>
           Discover and sell<br></br> your own NFT's
         </Text>
         <Button rounded="15" color="black" display="flex" marginLeft={10}>
@@ -24,7 +26,7 @@ function Banner() {
       <Image
         paddingRight={10}
         src={require('../img/eth-logo.png')}
-        height="90%"
+        height="60%"
       ></Image>
     </Box>
   );

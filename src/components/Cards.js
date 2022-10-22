@@ -4,7 +4,13 @@ import Card from './Card';
 
 function Cards({ cards }) {
   return (
-    <Box display="flex" justifyContent="space-around" flexWrap="wrap" p={3}>
+    <Box
+      display="flex"
+      justifyContent="space-around"
+      flexWrap="wrap"
+      p={3}
+      paddingTop={0}
+    >
       {cards.map(card => {
         return (
           <Card

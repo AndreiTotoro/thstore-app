@@ -7,7 +7,7 @@ function Banner() {
     <Box
       boxShadow="xs"
       rounded="20"
-      height="30%"
+      height="15%"
       width="90%"
       backgroundImage={require('../img/bkg.jpg')}
       display="flex"

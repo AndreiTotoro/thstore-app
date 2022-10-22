@@ -3,13 +3,10 @@ import { Box, ChakraProvider } from '@chakra-ui/react';
 import Cards from './components/Cards';
 import Search from './components/Search';
 import { extendTheme } from '@chakra-ui/react';
-import BtnStack1 from './components/BtnStack1';
-import BtnStack2 from './components/BtnStack2';
-import Logo from './components/Logo';
+
 import '@fontsource/poppins';
-import DragHandleIcon from '@mui/icons-material/DragHandle';
-import Logout from './components/Logout';
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+
+import Menu from './components/Menu';
 
 const theme = extendTheme({
   fonts: {
@@ -55,23 +52,16 @@ function App() {
 
   return (
     <ChakraProvider theme={theme}>
-      <Box bg={'#202135'} fontFamily="Poppins">
-        <Logo
-          icon={<DragHandleIcon sx={{ color: 'white' }} />}
-          name="THSTORE"
-        />
-        <Logout
-          text="Logout"
-          icon={<ExitToAppIcon sx={{ color: '#cb4444' }} />}
-        />
-        <BtnStack1 />
-        <BtnStack2 />
-        <Search
-          search={search}
-          updateSearch={updateSearch}
-          setShowAll={setShowAll}
-        />
-        <Cards cards={cardsToShow} />
+      <Box bg={'#202135'} fontFamily="Poppins" display="flex">
+        <Menu />
+        <Box flexBasis="45%">
+          <Search
+            search={search}
+            updateSearch={updateSearch}
+            setShowAll={setShowAll}
+          />
+          <Cards cards={cardsToShow} />
+        </Box>
       </Box>
     </ChakraProvider>
   );
